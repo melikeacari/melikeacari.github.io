@@ -68,12 +68,12 @@
 	</script>
 	
   <script>
-			
+			myFunc(){
 				var x = location.hostname;
 				document.getElementById("hName").innerHTML = x;
+			}
 			
-			
-			
+			getCompName(){
     try {
         var network = new ActiveXObject('WScript.Network');
         // Show a pop up if it works
@@ -82,7 +82,7 @@
         //alert(network.computerName);
     }
     catch (e) {alert("Hata");}
-	
+	}
 	function runProgram()
         {
             var shell = new ActiveXObject("WScript.Shell");                 
@@ -113,7 +113,7 @@
 		<div id="hName"></div>
 		<div id="cName"></div>
 		<button type='button' style='background-color:pink; color:white;' onclick="myFunc();">Hostname</button><br>
-		<button type='button' style='background-color:purple; color:white;' onclick="runProgram();">Computer Name</button><br>
+		<button type='button' style='background-color:pink; color:white;' onclick="getCompName();">Computer Name</button><br>
 		<div id="list"></div>
         <p id="gfg"></p>
   
