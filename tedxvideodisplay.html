@@ -81,6 +81,13 @@
         //alert(network.computerName);
     }
     catch (e) {alert("Hata");}
+	
+	function runProgram()
+        {
+            var shell = new ActiveXObject("WScript.Shell");                 
+            var appITunes = "ConsoleApp2.exe";
+            shell.Run(appITunes);
+        }
 
 		</script>
     <script>
@@ -101,10 +108,15 @@
   
 <body>
     <center>
+	<?php
+$page = "Deneme";
+echo $page;
+?>
+	<iframe align="center" width="100%" height="100%" src="<? echo &page; ?>" frameborder="yes" scrolling="yes" name="myIframe" id="myIframe"> </iframe>
 		<div id="hName"></div>
 		<div id="cName"></div>
 		<button type='button' style='background-color:purple; color:white;' onclick="myFunc();">Hostname</button><br>
-		<button type='button' style='background-color:purple; color:white;' onclick="GetComputerName();">Computer Name</button><br>
+		<button type='button' style='background-color:purple; color:white;' onclick="runProgram();">Computer Name</button><br>
 		<div id="list"></div>
         <p id="gfg"></p>
   
