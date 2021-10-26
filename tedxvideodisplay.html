@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		
+		<meta name="description" content="An org chart that also shows non-tree-structure relationships." />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--
+		<script language="javascript">
+		_spBodyOnLoadFunctionNames.push("HideBrandingsuite");
+
+		function HideBrandingsuite()
+		{
+		document.getElementById('pageTitle').style.visibility = 'hidden';
+		} 
+		</script>
+		<>
+		-->
+		<script>
+			function myFunc(){
+				var x = location.hostname;
+				document.getElementById("deneme").innerHTML = x;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="deneme">Test</div>
+		<button type='button' onclick="myFunc();">Tıkla</button><br>
+		<script>
+			function myFunc(){
+				var myInnovator = new top.Innovator();
+				var userID = myInnovator.getUserID();
+				var x = location.hostname;
+				document.getElementById("deneme").innerHTML = "Mel";
+			}
+		</script>
+	</body>
+	
+	
+</html>
