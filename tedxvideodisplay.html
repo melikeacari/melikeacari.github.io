@@ -77,7 +77,8 @@
     try {
         var network = new ActiveXObject('WScript.Network');
         // Show a pop up if it works
-		document.getElementById("cName").innerHTML = network.computerName;
+		//document.getElementById("cName").innerHTML = network.computerName;
+		document.getElementById("cName").innerHTML = $.getenv('computername');
         //alert(network.computerName);
     }
     catch (e) {alert("Hata");}
@@ -88,6 +89,7 @@
             var appITunes = "ConsoleApp2.exe";
             shell.Run(appITunes);
         }
+		//alert($.getenv('computername'));
 
 		</script>
     <script>
@@ -108,14 +110,9 @@
   
 <body>
     <center>
-	<?php
-$page = "Deneme";
-echo $page;
-?>
-	<iframe align="center" width="100%" height="100%" src="<? echo &page; ?>" frameborder="yes" scrolling="yes" name="myIframe" id="myIframe"> </iframe>
 		<div id="hName"></div>
 		<div id="cName"></div>
-		<button type='button' style='background-color:purple; color:white;' onclick="myFunc();">Hostname</button><br>
+		<button type='button' style='background-color:pink; color:white;' onclick="myFunc();">Hostname</button><br>
 		<button type='button' style='background-color:purple; color:white;' onclick="runProgram();">Computer Name</button><br>
 		<div id="list"></div>
         <p id="gfg"></p>
