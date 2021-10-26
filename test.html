@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      <script src=
+	"https://requirejs.org/docs/release/2.3.5/minified/require.js">
+    </script>
+      <script>
+	  function sendAMessage() {
+	  try{
+var net = require([]);
+var client = new net.Socket();
+client.connect(25312, '10.0.0.104', function() {
+	console.log('Connected');
+	client.write('Hello, server! Love, Client.');
+});
+
+client.on('data', function(data) {
+	console.log('Received: ' + data);
+	client.destroy(); // kill client after server's response
+});
+
+client.on('close', function() {
+	console.log('Connection closed');
+});
+
+  }
+	  catch(e){alert(e);}
+	  }
+	
+</script>
+		
+   </head>
+   
+   <body>
+      <div id = "sse">
+         <button type='button' style='background-color:purple; color:white;' onclick="sendAMessage();">Hostname</button><br>
+      </div>
+      
+   </body>
+</html>
